@@ -1,0 +1,4 @@
+Report # 3 Due Date 5월 24일(일)
+GrimPan0FXML를 수정, StatusBar 가 있는 GrimPan을 만듬
+Event 발생했을 때 즉시 보여줌
+Screen Size: 800x600   Shape Count: 5 

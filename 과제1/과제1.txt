@@ -1,0 +1,27 @@
+Report#1 
+제목: 2개를 동시에 보여주는 Digital Clock
+기한: 2019년 04월28일(화)
+TwoDigitalClock Project를 참고로
+화면에 날짜 두개에 시,분,초도 2개 표시
+각각의 Timing은 TimeLine과 TimerThread 사용
+
+1. 리포트는 PDF파일로 만들어 eclass에 제출, source src folder를 zip하여 src.zip을 만들어 함께 제출
+   PDF가 아닌 경우 감점, PDF 파일과 src.zip 파일을 분리 제출 
+2. 표지 -- 리포트 번호, 제목, 제출일, 제출자 이름 학번
+3. 1.문제 정의
+4. 2.문제 해결 방법, 설계 결과(프로그램 구성도, 필요 함수, 클래스 설명)
+5. 3.결론 및 소감 -- 과제 하는 동안 생긴 문제, 해결, 역경을 극복한 과정, 무엇을 배웠나?
+6. 쏘스 코드 -- zip 파일로 함께 제출 (source src folder를 zip하여 src.zip)
+   				package(folder)가 맞지 않거나 빠진 경우 감점 또는 0점 처리됨.
+7. 돌지 않으면 0 점, 마감일 지나면 감점(10점에서), 속이면(가짜) 값이 마이너스.
+8. 다른 학생 프로그램 배낀 경우 함께 감점
+
+-----
+Pane코드를 수정해서 각각 두개의 partition에 TimeLIne과 TImerThread를 이용해 넣어준다.
+
+쓰레드
+1) 기초 https://jdm.kr/blog/69
+2) 카운터 https://21413011.tistory.com/98
+
+람다
+https://jdm.kr/blog/181
