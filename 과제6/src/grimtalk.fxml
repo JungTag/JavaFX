@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<fx:root fx:id="root" prefHeight="888.0" prefWidth="623.0" style="-fx-background-color: #BED1DB;" type="AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <MenuBar layoutY="174.0" prefHeight="29.0" prefWidth="623.0" style="-fx-border-color: #ABABAB;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+			<menus>
+				<Menu mnemonicParsing="false" text="Shape">
+					<items>
+						<RadioMenuItem fx:id="menuLine" mnemonicParsing="false" onAction="#handleMenuLine" text="Line">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="toggleGroup1" />
+                     </toggleGroup></RadioMenuItem>
+						<RadioMenuItem fx:id="menuPencil" mnemonicParsing="false" onAction="#handleMenuPencil" selected="true" text="Pencil" toggleGroup="$toggleGroup1" />
+						<RadioMenuItem fx:id="menuPolygon" mnemonicParsing="false" onAction="#handleMenuPolygon" text="Polygon" toggleGroup="$toggleGroup1" />
+						<RadioMenuItem fx:id="menuRegular" mnemonicParsing="false" onAction="#handleMenuRegular" text="Regular" toggleGroup="$toggleGroup1" />
+						<RadioMenuItem fx:id="menuOval" mnemonicParsing="false" onAction="#handleMenuOval" text="Oval" toggleGroup="$toggleGroup1" />
+					</items>
+				</Menu>
+				<Menu mnemonicParsing="false" text="Edit">
+					<items>
+						<MenuItem fx:id="menuMove" mnemonicParsing="false" onAction="#handleMenuMove" text="Move" />
+						<MenuItem fx:id="menuDelete" mnemonicParsing="false" onAction="#handleMenuDelete" text="Delete" />
+                  <MenuItem fx:id="menuDeleteAll" mnemonicParsing="false" onAction="#handleMenuDeleteAll" text="Delete All" />
+					</items>
+				</Menu>
+				<Menu mnemonicParsing="false" text="Setting">
+					<items>
+						<MenuItem fx:id="menuStrokeWidth" mnemonicParsing="false" onAction="#handleMenuStrokeWidth" text="Stroke Width" />
+                  		<MenuItem fx:id="menuStrokeColor" mnemonicParsing="false" onAction="#handleMenuStrokeColor" text="Stroke Color" />
+						<MenuItem fx:id="menuFillColor" mnemonicParsing="false" onAction="#handleMenuFillColor" text="Fill Color" />
+						<CheckMenuItem fx:id="menuCheckStroke" mnemonicParsing="false" onAction="#handleMenuCheckStroke" selected="true" text="Storke" />
+						<CheckMenuItem fx:id="menuCheckFill" mnemonicParsing="false" onAction="#handleMenuCheckFill" text="Fill" />
+					</items>
+				</Menu>
+			</menus>
+      </MenuBar>
+      <BorderPane fx:id="drawFramePane" layoutY="208.0" prefHeight="526.0" prefWidth="623.0" style="-fx-background-color: #FFF; -fx-border-color: #ABABAB;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <HBox layoutX="334.0" layoutY="486.0" prefHeight="113.0" prefWidth="623.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label fx:id="lblMessage" maxHeight="1.7976931348623157E308" prefHeight="113.0" prefWidth="325.0" style="-fx-background-color: #FFFFFF;">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin></Label>
+            <Button fx:id="btnRegister" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleRegisterBtn" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #F9E734; -fx-border-color: #FFFFFF;">
+               <font>
+                  <Font name="Yu Gothic UI Semibold" size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/icons8-plus-48.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="btnConnect" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleConnectBtn" prefWidth="100.0" style="-fx-background-color: #F9E734; -fx-border-color: #FFFFFF;">
+               <font>
+                  <Font name="Yu Gothic UI Semibold" size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/icons8-connect-48.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="btnSend" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleSendBtn" prefWidth="100.0" style="-fx-background-color: #F9E734; -fx-border-color: #FFFFFF;">
+               <font>
+                  <Font name="Yu Gothic UI Semibold" size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/icons8-email-send-48.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+         </children></HBox>
+      <Pane layoutY="734.0" prefHeight="41.0" prefWidth="623.0" style="-fx-background-color: #EEE; -fx-border-color: #ABABAB;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <ImageView fitHeight="34.0" fitWidth="29.0" layoutX="14.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/icons8-happy-24%20(1).png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="34.0" fitWidth="29.0" layoutX="54.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/icons8-upload-24.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="29.0" fitWidth="29.0" layoutX="93.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" rotate="-81.9">
+               <image>
+                  <Image url="@img/icons8-call-24%20(1).png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane prefHeight="82.0" prefWidth="623.0" style="-fx-background-color: #BED1DB;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="48.0" layoutX="498.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/icons8-search-more-50.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="183.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kakao Grimtalk" textAlignment="CENTER" wrappingWidth="257.6513671875">
+               <font>
+                  <Font name="Yu Gothic UI Semibold" size="31.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="561.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/icons8-menu-52.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="50.0" fitWidth="48.0" layoutX="14.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/icons8-back-50.png" />
+               </image>
+            </ImageView>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Pane>
+      <Pane layoutY="94.0" prefHeight="82.0" prefWidth="623.0" style="-fx-background-image: #BED1DB;" AnchorPane.bottomAnchor="712.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="94.0">
+         <children>
+            <ImageView fitHeight="70.0" fitWidth="71.0" layoutX="14.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/icons8-test-account-48.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="92.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="user" wrappingWidth="47.99999651312828">
+               <font>
+                  <Font name="Yu Gothic UI Semibold" size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</fx:root>
